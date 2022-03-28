@@ -7,11 +7,8 @@ USER root
 RUN apt update && \
     apt install -y \
         bsdmainutils \
-        cvxpy \
         fonts-powerline \
         libxtst-dev \
-        nbdime \
-        nltk \
         powerline \
         pv \
         zsh && \
