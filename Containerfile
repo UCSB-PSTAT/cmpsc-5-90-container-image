@@ -23,11 +23,13 @@ RUN pip install jupyter_contrib_nbextensions && \
 ARG RPY2_CFFI_MODE=ABI
 
 RUN pip install \
+        datascience \
         cvxpy \
         nltk \
         quandl \ 
         altair vega_datasets \
         otter-grader \
+        pendulum \
         ipywebrtc \
         ipympl \
         jupyter_bokeh \
