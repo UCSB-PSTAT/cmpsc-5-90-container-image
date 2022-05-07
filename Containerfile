@@ -50,8 +50,7 @@ RUN jupyter nbextensions_configurator enable --sys-prefix && \
     pip install --pre rise && \
     jupyter nbextension install rise --py --sys-prefix && \
     jupyter nbextension enable rise --py --sys-prefix && \
-    pip install hide_code && \
-    pip install -U traitlets && \
+    pip install git+https://github.com/fdion/hide_code@compatibility && \
     jupyter nbextension install --py hide_code --sys-prefix && \
     jupyter nbextension enable --py hide_code --sys-prefix && \
     jupyter serverextension enable --py hide_code --sys-prefix
