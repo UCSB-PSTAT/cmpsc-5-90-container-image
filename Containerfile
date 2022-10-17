@@ -14,6 +14,8 @@ RUN apt update && \
         zsh && \
     apt-get clean
 
+RUN pip install -U nbclassic
+
 RUN pip install jupyter_contrib_nbextensions && \
     jupyter contrib nbextension install --sys-prefix && \
     jupyter nbextension enable toc2/main --sys-prefix && \
