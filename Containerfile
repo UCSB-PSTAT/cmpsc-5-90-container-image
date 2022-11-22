@@ -11,6 +11,9 @@ RUN apt update && \
         libxtst-dev \
         powerline \
         pv \
+        texlive-xetex \
+        texlive-fonts-recommended \
+        texlive-plain-generic \
         zsh && \
     apt-get clean
 
@@ -63,8 +66,8 @@ RUN rm -f /opt/conda/share/jupyter/lab/extensions/jupyter-matplotlib-0.4.* \
     rm -f /opt/conda/share/jupyter/lab/extensions/jupyter-widgets-jupyterlab-manager-1.1.0.tgz \
     rm -f /opt/conda/share/jupyter/lab/extensions/nbdime-jupyterlab-1.0.0.tgz   
 
-RUN npm install -g npm@latest && \
-    npm install -g codemirror && \
+# RUN npm install -g npm@latest && \
+RUN npm install -g codemirror && \
     jupyter nbextension enable table_beautifier/main --sys-prefix && \
     jupyter nbextension enable toggle_all_line_numbers/main --sys-prefix 
 
