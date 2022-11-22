@@ -11,6 +11,9 @@ RUN apt update && \
         libxtst-dev \
         powerline \
         pv \
+        texlive-xetex \
+        texlive-fonts-recommended \
+        texlive-plain-generic \
         zsh && \
     apt-get clean
 
