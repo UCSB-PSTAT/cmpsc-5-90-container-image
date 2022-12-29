@@ -42,7 +42,8 @@ RUN pip install \
         jupytext --upgrade \
         jupyterlab_vim \
         jupyterlab_widgets \
-        ipympl 
+        ipympl \
+        otter-grader
 
 RUN pip install --upgrade jupyterlab-git && \
     jupyter nbextension enable export_embedded/main --sys-prefix && \
