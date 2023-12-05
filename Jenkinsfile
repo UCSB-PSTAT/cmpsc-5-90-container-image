@@ -33,6 +33,7 @@ pipeline {
                         sh 'podman run -it --rm localhost/$IMAGE_NAME python -c "import datascience; import numpy; import pendulum; import matplotlib; import warnings; from urllib import request; import pandas; import cvxpy; import nltk; import quandl; import altair; from vega_datasets import data"'
                         sh 'podman run -it --rm localhost/$IMAGE_NAME which nbdiff'
                         sh 'podman run -it --rm localhost/$IMAGE_NAME which otter'
+                        sh 'podman run -it --rm localhost/$IMAGE_NAME python -c "%%ai help"'
                         sh 'podman run -d --name=$IMAGE_NAME --rm -p 8888:8888 localhost/$IMAGE_NAME start-notebook.sh --NotebookApp.token="jenkinstest"'
                         sh 'sleep 10 && curl -v http://localhost:8888/lab?token=jenkinstest 2>&1 | grep -P "HTTP\\S+\\s200\\s+[\\w\\s]+\\s*$"'
                         sh 'curl -v http://localhost:8888/tree?token=jenkinstest 2>&1 | grep -P "HTTP\\S+\\s200\\s+[\\w\\s]+\\s*$"'
