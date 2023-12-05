@@ -36,6 +36,4 @@ RUN pip install \
         jupyter_ai\
         ipympl
 
-RUN mamba install 
-
 USER $NB_USER
