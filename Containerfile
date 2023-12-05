@@ -33,6 +33,9 @@ RUN pip install \
         jupytext --upgrade \
         jupyterlab_vim \
         jupyterlab_widgets \
-        ipympl 
+        jupyter_ai\
+        ipympl
+
+RUN mamba install 
 
 USER $NB_USER
