@@ -33,6 +33,7 @@ RUN pip install \
         jupytext --upgrade \
         jupyterlab_vim \
         jupyterlab_widgets \
-        ipympl 
+        jupyter_ai\
+        ipympl
 
 USER $NB_USER
