@@ -4,7 +4,7 @@ pipeline {
         upstream(upstreamProjects: 'UCSB-PSTAT GitHub/jupyter-base/main', threshold: hudson.model.Result.SUCCESS)
     }
     environment {
-        IMAGE_NAME = 'cmpsc5'
+        IMAGE_NAME = 'cmpsc5-ai'
     }
     stages {
         stage('Build Test Deploy') {
@@ -49,7 +49,7 @@ pipeline {
                     }
                 }
                 stage('Deploy') {
-                    when { branch 'main' }
+                    when { branch 'ai' }
                     environment {
                         DOCKER_HUB_CREDS = credentials('DockerHubToken')
                     }
