@@ -24,6 +24,7 @@ RUN pip install \
         nltk \
         quandl \ 
         altair vega_datasets \
+        openai \
         otter-grader \
         pendulum \
         ipywebrtc \
