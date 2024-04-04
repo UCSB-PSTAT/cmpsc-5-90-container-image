@@ -31,7 +31,6 @@ RUN pip install \
         jupyter_bokeh \
         nbdime \
         jupytext --upgrade \
-        jupyterlab_vim \
         jupyterlab_widgets \
         ipympl
 
