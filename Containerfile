@@ -22,7 +22,7 @@ RUN pip install \
         datascience \
         cvxpy \
         nltk \
-        quandl \ 
+        quandl \
         altair vega_datasets \
         openai \
         otter-grader \
@@ -35,6 +35,9 @@ RUN pip install \
         jupyterlab_vim \
         jupyterlab_widgets \
         jupyter_ai[all]\
-        ipympl
+        ipympl\
+	html5lib\
+	lxml\
+	beautifulsoup4
 
 USER $NB_USER
