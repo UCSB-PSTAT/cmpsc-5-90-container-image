@@ -30,7 +30,7 @@ pipeline {
                 }
                 stage('Test') {
                     steps {
-                        sh 'podman run -it --rm localhost/$IMAGE_NAME python -c "import datascience; import numpy; import pendulum; import matplotlib; import warnings; from urllib import request; import pandas; import cvxpy; import nltk; import quandl; import altair; from vega_datasets import data; import openai"'
+                        sh 'podman run -it --rm localhost/$IMAGE_NAME python -c "from bs4 import BeautifulSoup; import lxml; import html5lib; import datascience; import numpy; import pendulum; import matplotlib; import warnings; from urllib import request; import pandas; import cvxpy; import nltk; import quandl; import altair; from vega_datasets import data; import openai"'
                         sh 'podman run -it --rm localhost/$IMAGE_NAME which nbdiff'
                         sh 'podman run -it --rm localhost/$IMAGE_NAME which otter'
                         sh 'podman run -it --rm localhost/$IMAGE_NAME jupyter server extension list | grep ai'
