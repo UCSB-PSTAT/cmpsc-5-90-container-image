@@ -32,9 +32,8 @@ RUN pip install \
         jupyter_bokeh \
         nbdime \
         jupytext --upgrade \
-        jupyterlab_vim \
         jupyterlab_widgets \
-        jupyter_ai[all]\
+        "jupyter-ai[all]<3.0.0"\
         ipympl\
 	html5lib\
 	lxml\
