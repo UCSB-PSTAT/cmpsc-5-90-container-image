@@ -39,4 +39,6 @@ RUN pip install \
 	lxml\
 	beautifulsoup4
 
+# Satisfies the v2.x startup validation check
+ENV OPENAI_API_KEY="sk-placeholder-key"
 USER $NB_USER
